@@ -1,0 +1,11 @@
+let votes = {
+    candidate1: 0,
+    candidate2: 0,
+    candidate3: 0
+};
+
+function vote(candidate) {
+    votes[candidate]++;
+    document.getElementById(`count${candidate.slice(-1)}`).innerText = votes[candidate];
+    alert(`You voted for ${candidate.replace('candidate', 'Candidate ')}`);
+}
